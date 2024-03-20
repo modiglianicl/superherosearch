@@ -4,7 +4,7 @@ $(document).ready(function(){
     $("#buscarheroe").on('click',function() {
         idSuperheroe = $("#superID").val(); // Obtenemos el valor del input form
         
-        // Construyendo grafico del dolar
+        // Construyendo grafico
         let statsHeroes = []; // Aca van los datos a apendar con la API
         let optionGrafico = { // Parametros gráfico
             animationEnabled: true,
@@ -75,7 +75,7 @@ $(document).ready(function(){
             let statsHeroeApi = apiData.powerstats;
 
             for (let stat in statsHeroeApi) {
-                console.log("probando")
+                
                 statsHeroes.push({
                     y: parseInt(statsHeroeApi[stat]),
                     label : stat
