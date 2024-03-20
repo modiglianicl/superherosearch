@@ -10,42 +10,47 @@
 </head>
 <body>
     <main>
-        <section class="big-hero">
-            <h1>Buscador Super Heroes</h1>
+        <section class="big-hero bg-dark">
+            <h1 >Buscador Super Heroes</h1>
         </section>
-        <section class="busqueda">
-            <input type="text" name="superID" id="superID">
+        <section class="busqueda py-2">
+            <input type="text" name="superID" placeholder="Ingresa una #ID" id="superID">
             <button class="px-3 mx-3"id="buscarheroe">Buscar</button>
         </section>
         <section id="resultado" class="my-5">
-            <div class="row">
-                <div class="col-6" id="biografia-heroe" hidden>
-                    <div class="card mb-3" style="max-width: 540px;">
+            <div class="row d-flex justify-content-center">
+                <div class="col-5" id="biografia-heroe" hidden>
+                    <div class="card mb-3 my-4" style="max-width: 750px;">
                         <div class="row g-0">
                           <div class="col-md-4">
                             <img src="assets/img/unknown.jpg" class="img-fluid rounded-start" id="imagen-heroe" alt="...">
                           </div>
                           <div class="col-md-8">
                             <div class="card-body">
-                              <h5 class="card-title">Nombre del heroe</h5>
-                              <p class="card-text">Lugar nacimiento : <span id="lugar-nacimiento"></span></p>
-                              <p class="card-text">Aliases : <span id="aliases"></span></p>
+                              <h5 class="card-title display-4 bg-dark">Nombre del heroe</h5>
+                              <p class="card-text"><b>Lugar nacimiento</b> : <span id="lugar-nacimiento"></span></p>
+                              <p class="card-text"><b>Aliases</b> : <span id="aliases"></span></p>
+                              <p class="card-text"><b>Primera aparición</b> : <span id="primera-aparicion"></span></p>
+                              <hr>
+                              <p class="card-text"><b>Estatura</b> : <span id="estatura"></span></p>
+                              <p class="card-text"><b>Peso</b> : <span id="peso-heroe"></span></p>
                             </div>
                           </div>
                         </div>
                       </div>
                 </div>
-                <div class="col-6" id="stats-heroe" hidden>
+                <div class="col-5" id="stats-heroe" hidden>
                     probando
                 </div>
             </div>
         </section>
     </main>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.canvasjs.com/ga/jquery.canvasjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
-integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

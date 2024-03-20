@@ -7,9 +7,15 @@
 .big-hero {
     display: flex;
     justify-content: center;
+    color: white;
 }
 
 .busqueda {
     display: flex;
     justify-content: center;
+}
+
+.card-title {
+    color: white;
+    text-align: center;
 }
