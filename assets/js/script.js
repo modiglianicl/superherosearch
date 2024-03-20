@@ -41,6 +41,8 @@ $(document).ready(function(){
           $.ajax(settings).done(function (apiData) {
             // Nombre
             let nombreHeroe = apiData.name;
+            // Universo
+            let universoHeroe = ` (${apiData.biography.publisher})`
             // Image URL
             let imagenHeroe = apiData.image.url;
             // Obteniendo aliases
@@ -88,16 +90,25 @@ $(document).ready(function(){
             console.log(statsHeroes);
             $("#stats-heroe").CanvasJSChart(optionGrafico)
 
+            // Color ojos
+            let ojosHeroe = apiData.appearance["eye-color"];
+
+            // Color pelo
+
+            let peloHeroe = apiData.appearance["hair-color"];
+
 
 
             // Inyectando variables en el HTML
-            $(".card-title").text(nombreHeroe);
+            $(".card-title").text(nombreHeroe+universoHeroe);
             $("#imagen-heroe").attr('src',imagenHeroe);
             $("#aliases").text(aliasesHeroe);
             $("#lugar-nacimiento").text(lugarNacimiento);
             $("#primera-aparicion").text(primeraAparicion);
             $("#estatura").text(estaturaHeroe);
             $("#peso-heroe").text(pesoHeroe);
+            $("#color-ojos").text(ojosHeroe);
+            $("#color-pelo").text(peloHeroe);
           });
             // Hacemos aparecer los resultados
             $("#biografia-heroe").removeAttr('hidden');
